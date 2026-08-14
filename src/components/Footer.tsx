@@ -1,4 +1,6 @@
-import { footer, instagramHref, site } from "@/content";
+import Link from "next/link";
+import { CookieSettingsLink } from "@/components/CookieSettingsLink";
+import { cookies, footer, instagramHref, privacy, site } from "@/content";
 
 export function Footer() {
   const instagram = instagramHref();
@@ -36,17 +38,38 @@ export function Footer() {
             </p>
           ) : null}
           <p>
-            <a className="hover:text-cream" href="#contato">
+            <Link className="hover:text-cream" href="/#contato">
               Contato
-            </a>
+            </Link>
+          </p>
+          <p>
+            <Link className="hover:text-cream" href="/privacidade">
+              {privacy.title}
+            </Link>
+          </p>
+          <p>
+            <CookieSettingsLink className="hover:text-cream">
+              {cookies.settings}
+            </CookieSettingsLink>
           </p>
         </div>
       </div>
 
       <div className="mx-auto max-w-6xl space-y-3 border-t border-white/10 px-5 py-8 text-xs leading-relaxed text-cream/55 sm:px-8">
         <p>{footer.legal}</p>
-        <p>{footer.privacy}</p>
-        <p className="pt-2">© {year} {site.name}</p>
+        <p>
+          {footer.privacy}{" "}
+          <Link
+            className="underline decoration-white/20 underline-offset-4 hover:text-cream"
+            href="/privacidade"
+          >
+            {privacy.title}
+          </Link>
+          .
+        </p>
+        <p className="pt-2">
+          © {year} {site.name}
+        </p>
       </div>
     </footer>
   );

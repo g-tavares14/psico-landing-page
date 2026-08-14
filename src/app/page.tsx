@@ -1,11 +1,14 @@
 import Image from "next/image";
+import Link from "next/link";
 import { FaqList } from "@/components/FaqList";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { JsonLd } from "@/components/JsonLd";
+import { WhatsAppLink } from "@/components/WhatsAppLink";
 import {
   about,
   approach,
+  contactNotice,
   faq,
   hero,
   instagramHref,
@@ -14,11 +17,9 @@ import {
   paths,
   process,
   site,
-  whatsappHref,
 } from "@/content";
 
 export default function Home() {
-  const wa = whatsappHref();
   const instagram = instagramHref();
   const heroImage = site.portrait || "/images/hero.jpg";
   const hasWhatsapp = Boolean(site.whatsapp);
@@ -45,12 +46,12 @@ export default function Home() {
                 {hero.lede}
               </p>
               <div className="mt-10 flex flex-wrap items-center gap-4">
-                <a
-                  href={wa}
+                <WhatsAppLink
+                  place="hero"
                   className="inline-flex items-center rounded-full bg-olive-deep px-6 py-3.5 text-sm uppercase tracking-[0.16em] text-cream transition-colors hover:bg-olive"
                 >
                   {invite.cta}
-                </a>
+                </WhatsAppLink>
                 <a
                   href="#sobre"
                   className="inline-flex items-center px-2 py-3 text-sm uppercase tracking-[0.16em] text-ink-soft underline decoration-line underline-offset-8 transition-colors hover:text-ink"
@@ -254,12 +255,12 @@ export default function Home() {
               {invite.body}
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-5">
-              <a
-                href={wa}
+              <WhatsAppLink
+                place="invite"
                 className="inline-flex items-center rounded-full bg-clay px-6 py-3.5 text-sm uppercase tracking-[0.16em] text-cream transition-colors hover:bg-[#9e5538]"
               >
                 {invite.cta}
-              </a>
+              </WhatsAppLink>
               <a
                 href="#duvidas"
                 className="text-sm uppercase tracking-[0.16em] text-ink-soft underline decoration-line underline-offset-8 hover:text-ink"
@@ -300,15 +301,25 @@ export default function Home() {
                   ? "O caminho mais direto é o WhatsApp. O retorno é feito com calma, em horário comercial."
                   : "Escreva quando quiser. O retorno é feito com calma, em horário comercial."}
               </p>
+              {hasWhatsapp ? (
+                <p className="mt-5 max-w-md text-sm leading-relaxed text-ink-soft">
+                  {contactNotice}{" "}
+                  <Link
+                    href="/privacidade"
+                    className="text-ink underline decoration-line underline-offset-4 hover:text-olive"
+                  >
+                    Ler a política
+                  </Link>
+                  .
+                </p>
+              ) : null}
             </div>
 
             <div className="space-y-6 lg:col-span-6 lg:col-start-7">
               {hasWhatsapp ? (
-                <ContactRow
-                  label="WhatsApp"
-                  value="(11) 95320-6800"
-                  href={wa}
-                />
+                <WhatsAppLink place="contato" className="block transition-colors hover:text-olive">
+                  <ContactRow label="WhatsApp" value="(11) 95320-6800" />
+                </WhatsAppLink>
               ) : null}
               {instagram ? (
                 <ContactRow

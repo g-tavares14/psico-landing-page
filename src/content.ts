@@ -167,7 +167,112 @@ export const footer = {
   legal:
     "Este site apresenta o trabalho da psicóloga de forma informativa, em acordo com as orientações do Sistema Conselhos de Psicologia. Não substitui avaliação ou acompanhamento profissional. Não há promessa de resultado.",
   privacy:
-    "Ao entrar em contato, seus dados são usados apenas para retorno e agendamento.",
+    "Os dados de contato são usados só para retorno e agendamento.",
+};
+
+export const cookies = {
+  title: "Cookies",
+  body: "Uso cookies necessários para lembrar sua escolha e, só se você aceitar, cookies do Google (Analytics e anúncios) para entender o site e medir campanhas. A Vercel mede visitas sem cookie, com ou sem aceite. Recusar é tão simples quanto aceitar.",
+  accept: "Aceitar cookies do Google",
+  reject: "Recusar opcionais",
+  policy: "Política de privacidade",
+  settings: "Cookies",
+};
+
+export const contactNotice =
+  "Ao abrir o WhatsApp, a conversa acontece na plataforma da Meta. Uso o que você escrever só para responder e agendar. Os detalhes estão na Política de privacidade.";
+
+export const privacy = {
+  title: "Política de privacidade",
+  kicker: "Dados pessoais",
+  updatedLabel: "Última atualização",
+  updated: "14 de agosto de 2026",
+  intro:
+    "Este site apresenta o trabalho da psicóloga Beatriz Meirelles. Não há formulário nem cadastro aqui: o contato acontece no WhatsApp. Esta página explica quais dados entram em jogo, para quê e quais são os seus direitos — de acordo com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018).",
+  sections: [
+    {
+      title: "Quem é responsável pelo tratamento",
+      paragraphs: [
+        "A controladora é Beatriz Meirelles, psicóloga, CRP 06/237136, com atendimento online a partir de Mogi das Cruzes (SP).",
+        "Para exercer seus direitos ou tirar dúvida sobre esta política, escreva pelo WhatsApp informado no site. Esse é o canal oficial enquanto não houver um e-mail cadastrado.",
+      ],
+    },
+    {
+      title: "Que dados este site trata",
+      paragraphs: [
+        "O site em si não pede nome, e-mail ou telefone. Não há cadastro nem ficha de anamnese nesta página.",
+        "Quando você clica em Agendar ou no botão do WhatsApp, o navegador abre o aplicativo ou o WhatsApp Web da Meta, com uma mensagem pronta. A partir daí, a conversa — e os dados que você enviar, como nome, número e o que escrever — acontece na plataforma da Meta. Eu uso o que você me conta só para responder, entender se o acompanhamento faz sentido e agendar.",
+        "O Vercel Web Analytics registra, de forma agregada e sem cookies, páginas vistas, origem aproximada do acesso e tipo de dispositivo. Não identifica você pelo nome e não serve para te anunciar em outros sites.",
+        "Se você aceitar os cookies do Google, o Google Analytics 4 e, quando houver campanha, o Google Ads registram páginas vistas, origem do acesso, tipo de dispositivo, identificadores de cookie e cliques no WhatsApp (para saber se o anúncio gerou contato). Sem o aceite, essas tags não são ativadas.",
+        "A hospedagem (Vercel) pode registrar, por um período curto, dados de log como endereço IP, data e página acessada, para segurança e funcionamento do site.",
+        "As fontes do site são carregadas pelo serviço de fontes do Google. Isso pode envolver o envio do seu endereço IP ao Google.",
+      ],
+    },
+    {
+      title: "Para que uso os dados e com que base legal",
+      paragraphs: [
+        "Contato e agendamento pelo WhatsApp: para responder e, se for o caso, marcar a conversa inicial. Base legal: procedimentos preliminares relacionados a um contrato (art. 7º, V, da LGPD) e o interesse legítimo de manter o canal de atendimento (art. 7º, IX).",
+        "Medida de uso na Vercel (Web Analytics): para entender, de forma agregada, como o site é usado. Não usa cookies. Base legal: legítimo interesse (art. 7º, IX).",
+        "Google Analytics e Google Ads: para estatística de uso, funil de campanha e público-alvo, somente com aceite. Base legal: consentimento (art. 7º, I).",
+        "Logs de hospedagem e fontes: funcionamento e segurança do site. Base legal: legítimo interesse (art. 7º, IX).",
+      ],
+    },
+    {
+      title: "Com quem os dados são compartilhados",
+      paragraphs: [
+        "Meta Platforms (WhatsApp) opera o aplicativo em que a conversa acontece.",
+        "Google: serviço de fontes; Analytics e Ads somente com consentimento.",
+        "Vercel hospeda o site, processa logs técnicos e opera o Web Analytics (sem cookie).",
+        "Não vendo dados e não envio lista de conversas do WhatsApp para anúncio. O Google Ads, se você aceitar os cookies, pode usar o fato de ter visitado o site ou clicado em Agendar para medir a campanha.",
+      ],
+    },
+    {
+      title: "Transferência internacional",
+      paragraphs: [
+        "WhatsApp, Google e Vercel podem processar dados fora do Brasil, inclusive nos Estados Unidos. Quando isso acontece, o tratamento se apoia nos mecanismos da LGPD para transferências internacionais (arts. 33 a 36) e nas salvaguardas contratuais desses fornecedores.",
+      ],
+    },
+    {
+      title: "Por quanto tempo os dados ficam guardados",
+      paragraphs: [
+        "Conversas de WhatsApp sobre agendamento: enquanto forem necessárias para o atendimento e pelos prazos legais ou éticos da Psicologia, quando o acompanhamento começar.",
+        "Dados clínicos e prontuário, se o trabalho seguir, obedecem ao sigilo profissional e aos prazos do Conselho Federal de Psicologia — não ficam neste site.",
+        "Vercel Web Analytics: estatísticas agregadas, pelo prazo usual da plataforma.",
+        "Google Analytics e Ads: pelo prazo da propriedade (em geral 14 meses) e das regras da conta de anúncios.",
+        "Sua escolha de cookies fica no navegador até você limpar os dados ou mudar a preferência no rodapé.",
+        "Logs de hospedagem: pelo tempo usual da plataforma, em regra poucos dias ou semanas.",
+      ],
+    },
+    {
+      title: "Seus direitos",
+      paragraphs: [
+        "Você pode confirmar se trato seus dados, acessar, corrigir, anonimizar, bloquear ou eliminar o que for desnecessário, pedir informação sobre compartilhamentos, se opor ao tratamento feito com base em legítimo interesse e revogar o consentimento dos cookies do Google.",
+        "Para exercer esses direitos, fale comigo pelo WhatsApp do site. Vou responder no prazo da LGPD. Se não ficar satisfeito, é possível apresentar reclamação à Autoridade Nacional de Proteção de Dados (ANPD).",
+        "Recusar os cookies do Google não impede o uso do site nem o contato pelo WhatsApp. A medida da Vercel continua, sem cookie.",
+      ],
+    },
+    {
+      title: "Cookies neste site",
+      paragraphs: [
+        "Necessários: guardam só a sua escolha — aceitar ou recusar os cookies do Google.",
+        "Vercel Web Analytics: sem cookies, sempre ativo, só estatística agregada.",
+        "Google Analytics e Google Ads: somente depois do aceite. Servem para estatística, funil de campanha e público. Você muda a escolha pelo link Cookies no rodapé.",
+      ],
+    },
+    {
+      title: "Segurança e sigilo profissional",
+      paragraphs: [
+        "O site usa conexão criptografada (HTTPS). Não armazeno prontuário nem relatos clínicos nesta página.",
+        "O que você contar em sessão, se o acompanhamento começar, está protegido pelo sigilo do Código de Ética Profissional do Psicólogo. Esta política fala do site e do primeiro contato — não substitui o contrato e as informações que combinamos no consultório.",
+      ],
+    },
+    {
+      title: "Atualizações",
+      paragraphs: [
+        "Se eu mudar a forma de tratar dados — por exemplo, ao incluir um e-mail de contato ou outro pixel — atualizo esta página e a data no topo. O que depender de consentimento só vale de novo com uma nova escolha no banner.",
+      ],
+    },
+  ],
 };
 
 export function whatsappHref() {

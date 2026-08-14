@@ -1,11 +1,20 @@
 "use client";
 
+import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { nav, site, whatsappHref } from "@/content";
+import { WhatsAppLink } from "@/components/WhatsAppLink";
+import { nav, site } from "@/content";
 
 export function Header() {
+  const pathname = usePathname();
+  const router = useRouter();
+  const onHome = pathname === "/";
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  function sectionHref(hash: string) {
+    return onHome ? hash : `/${hash}`;
+  }
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -23,6 +32,10 @@ export function Header() {
 
   function go(href: string) {
     setOpen(false);
+    if (!onHome) {
+      router.push(`/${href}`);
+      return;
+    }
     window.setTimeout(() => {
       document.body.style.overflow = "";
       document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
@@ -47,7 +60,7 @@ export function Header() {
           }`}
         >
           <div className="mx-auto flex h-[4.25rem] max-w-6xl items-center justify-between px-5 sm:px-8">
-            <a href="#topo" className="min-w-0">
+            <a href={onHome ? "#topo" : "/"} className="min-w-0">
               <p className="font-serif text-[1.15rem] leading-none tracking-tight text-ink">
                 {site.name}
               </p>
@@ -63,18 +76,18 @@ export function Header() {
               {nav.map((item) => (
                 <a
                   key={item.href}
-                  href={item.href}
+                  href={sectionHref(item.href)}
                   className="text-[0.82rem] uppercase tracking-[0.16em] text-ink-soft transition-colors hover:text-ink"
                 >
                   {item.label}
                 </a>
               ))}
-              <a
-                href={whatsappHref()}
+              <WhatsAppLink
+                place="header"
                 className="inline-flex items-center rounded-full bg-olive-deep px-4 py-2 text-[0.78rem] uppercase tracking-[0.16em] text-cream transition-colors hover:bg-olive"
               >
                 Agendar
-              </a>
+              </WhatsAppLink>
             </nav>
 
             <button
@@ -119,7 +132,7 @@ export function Header() {
             {nav.map((item) => (
               <a
                 key={item.href}
-                href={item.href}
+                href={sectionHref(item.href)}
                 onClick={(event) => {
                   event.preventDefault();
                   go(item.href);
@@ -129,13 +142,13 @@ export function Header() {
                 {item.label}
               </a>
             ))}
-            <a
-              href={whatsappHref()}
+            <WhatsAppLink
+              place="header-mobile"
               onClick={() => setOpen(false)}
               className="mt-8 inline-flex items-center justify-center rounded-full bg-olive-deep px-5 py-3 text-sm uppercase tracking-[0.16em] text-cream"
             >
               Agendar uma conversa
-            </a>
+            </WhatsAppLink>
           </nav>
         </div>
       ) : null}
