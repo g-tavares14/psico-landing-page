@@ -39,24 +39,27 @@ export default function Home() {
               <p className="text-[0.72rem] uppercase tracking-[0.28em] text-olive">
                 {hero.eyebrow}
               </p>
-              <h1 className="mt-5 max-w-[11ch] font-serif text-[3.15rem] font-light leading-[0.95] tracking-tight text-ink sm:text-6xl lg:text-[5.15rem]">
+              <h1 className="mt-5 max-w-[18ch] font-serif text-[3.15rem] font-light leading-[0.95] tracking-tight text-ink sm:text-6xl lg:text-[5.15rem]">
                 {hero.title}
               </h1>
               <p className="mt-8 max-w-md text-lg leading-relaxed text-ink-soft">
                 {hero.lede}
+              </p>
+              <p className="mt-5 max-w-md text-lg leading-relaxed text-ink-soft">
+                {hero.support}
               </p>
               <div className="mt-10 flex flex-wrap items-center gap-4">
                 <WhatsAppLink
                   place="hero"
                   className="inline-flex items-center rounded-full bg-olive-deep px-6 py-3.5 text-sm uppercase tracking-[0.16em] text-cream transition-colors hover:bg-olive"
                 >
-                  {invite.cta}
+                  {hero.cta}
                 </WhatsAppLink>
                 <a
                   href="#sobre"
                   className="inline-flex items-center px-2 py-3 text-sm uppercase tracking-[0.16em] text-ink-soft underline decoration-line underline-offset-8 transition-colors hover:text-ink"
                 >
-                  Conhecer o trabalho
+                  {hero.secondary}
                 </a>
               </div>
               <p className="mt-10 text-xs uppercase tracking-[0.2em] text-ink-soft">
@@ -136,12 +139,16 @@ export default function Home() {
               {approach.title}
             </h2>
             <div className="mt-10 grid gap-10 lg:grid-cols-12">
-              <p className="text-[1.08rem] leading-[1.75] text-cream/80 lg:col-span-6">
-                {approach.body}
-              </p>
-              <p className="text-[1.08rem] leading-[1.75] text-cream/80 lg:col-span-5 lg:col-start-8">
-                {approach.closer}
-              </p>
+              <div className="space-y-6 text-[1.08rem] leading-[1.75] text-cream/80 lg:col-span-6">
+                {approach.body.map((p) => (
+                  <p key={p}>{p}</p>
+                ))}
+              </div>
+              <div className="space-y-6 text-[1.08rem] leading-[1.75] text-cream/80 lg:col-span-5 lg:col-start-8">
+                {approach.closer.map((p) => (
+                  <p key={p}>{p}</p>
+                ))}
+              </div>
             </div>
 
             <ol className="mt-16 grid gap-px bg-white/10 sm:grid-cols-3">
@@ -171,9 +178,11 @@ export default function Home() {
                   {paths.title}
                 </h2>
               </div>
-              <p className="text-[1.08rem] leading-[1.75] text-ink-soft lg:col-span-6 lg:col-start-7 lg:pt-10">
-                {paths.intro}
-              </p>
+              {paths.intro ? (
+                <p className="text-[1.08rem] leading-[1.75] text-ink-soft lg:col-span-6 lg:col-start-7 lg:pt-10">
+                  {paths.intro}
+                </p>
+              ) : null}
             </div>
 
             <ol className="mt-14 divide-y divide-line border-y border-line">
@@ -194,7 +203,7 @@ export default function Home() {
                 </li>
               ))}
             </ol>
-            <p className="mt-8 max-w-2xl text-sm leading-relaxed text-ink-soft">
+            <p className="mt-8 max-w-2xl text-[1.05rem] leading-relaxed text-ink-soft">
               {paths.note}
             </p>
           </div>
@@ -211,23 +220,35 @@ export default function Home() {
             <h2 className="mt-4 max-w-xl font-serif text-4xl font-light leading-tight tracking-tight sm:text-5xl">
               {process.title}
             </h2>
+            <p className="mt-6 max-w-xl text-[1.08rem] leading-relaxed text-ink-soft">
+              {process.intro}
+            </p>
 
             <div className="mt-14 grid gap-12 lg:grid-cols-12">
-              <ol className="space-y-12 lg:col-span-7">
-                {process.steps.map((step) => (
-                  <li key={step.num} className="grid grid-cols-[auto_1fr] gap-6">
-                    <span className="font-serif text-4xl font-light text-olive/80">
-                      {step.num}
-                    </span>
-                    <div>
-                      <h3 className="font-serif text-2xl font-light">{step.title}</h3>
-                      <p className="mt-3 max-w-md text-[1.05rem] leading-relaxed text-ink-soft">
-                        {step.text}
-                      </p>
-                    </div>
-                  </li>
-                ))}
-              </ol>
+              <div className="lg:col-span-7">
+                <ol className="space-y-12">
+                  {process.steps.map((step) => (
+                    <li key={step.num} className="grid grid-cols-[auto_1fr] gap-6">
+                      <span className="font-serif text-4xl font-light text-olive/80">
+                        {step.num}
+                      </span>
+                      <div>
+                        <h3 className="font-serif text-2xl font-light">{step.title}</h3>
+                        {step.text ? (
+                          <p className="mt-3 max-w-md text-[1.05rem] leading-relaxed text-ink-soft">
+                            {step.text}
+                          </p>
+                        ) : null}
+                      </div>
+                    </li>
+                  ))}
+                </ol>
+                <div className="mt-12 space-y-4 text-[1.05rem] leading-relaxed text-ink-soft">
+                  {process.note.map((p) => (
+                    <p key={p}>{p}</p>
+                  ))}
+                </div>
+              </div>
 
               <div className="relative aspect-[3/4] overflow-hidden bg-paper lg:col-span-4 lg:col-start-9">
                 <Image
@@ -251,9 +272,11 @@ export default function Home() {
             <h2 className="mt-4 max-w-2xl font-serif text-4xl font-light leading-tight tracking-tight sm:text-5xl">
               {invite.title}
             </h2>
-            <p className="mt-6 max-w-xl text-[1.08rem] leading-relaxed text-ink-soft">
-              {invite.body}
-            </p>
+            <div className="mt-6 max-w-xl space-y-4 text-[1.08rem] leading-relaxed text-ink-soft">
+              {invite.body.map((p) => (
+                <p key={p}>{p}</p>
+              ))}
+            </div>
             <div className="mt-10 flex flex-wrap items-center gap-5">
               <WhatsAppLink
                 place="invite"

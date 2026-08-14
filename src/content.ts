@@ -11,7 +11,7 @@ export const site = {
   role: "Psicóloga",
   formation: "Pós-graduanda em Terapia Cognitivo-Comportamental",
   crp: "CRP 06/237136",
-  modality: "Atendimento online",
+  modality: "Atendimento online e presencial",
   city: "Mogi das Cruzes",
   whatsapp: "5511953206800",
   instagram: "beatrizmeirelles.psico",
@@ -31,100 +31,126 @@ export const nav = [
 
 export const hero = {
   eyebrow: "Psicóloga · TCC",
-  title: "Um espaço para organizar o que pesa.",
-  lede: "Acompanhamento psicológico com escuta próxima e a clareza da Terapia Cognitivo-Comportamental. Para ansiedade, autocrítica e as transições que pedem mais presença.",
+  title: "Psicoterapia para se entender, não para se julgar.",
+  lede: "Um espaço para entender o que você sente, reconhecer padrões e construir formas mais saudáveis de lidar com aquilo que tem pesado.",
+  support:
+    "Acompanhamento psicológico para adultos que lidam com ansiedade, autocobrança, insegurança, pensamentos que não desligam, relacionamentos e os desafios da vida adulta.",
+  cta: "Quero saber sobre a terapia",
+  secondary: "Conhecer o trabalho",
 };
 
 export const about = {
   kicker: "Sobre",
-  title: "Cuidado com método. Presença de verdade.",
+  title: "Talvez você não precise se cobrar mais. Talvez precise se compreender melhor.",
   paragraphs: [
-    "Sou Beatriz Meirelles, psicóloga recém-formada e em pós-graduação em Terapia Cognitivo-Comportamental. Chego à prática com o rigor de quem continua estudando — e com o tempo, a atenção e a disponibilidade que cada pessoa merece.",
-    "Acredito que a terapia funciona quando junta duas coisas: um espaço seguro para falar do que é difícil e ferramentas concretas para lidar com isso no dia a dia. Não se trata de pensar positivo. Trata-se de entender os ciclos que se repetem e ensaiar, com calma, outros jeitos de responder a eles.",
+    "Sou Beatriz Meirelles, psicóloga — CRP 06/237136 — e pós-graduanda em Terapia Cognitivo-Comportamental.",
+    "Meu trabalho é voltado principalmente para adultos que sentem que estão sempre tentando dar conta de tudo, mas acabam presos em ansiedade, autocobrança, culpa, comparação, inseguranças ou padrões que se repetem.",
+    "Acredito em uma terapia que une acolhimento e método.",
+    "Um espaço em que você possa falar sobre o que é difícil sem precisar ter todas as respostas — e, ao mesmo tempo, compreender melhor seus pensamentos, emoções, comportamentos e relações.",
+    "Não se trata de pensar positivo ou simplesmente “parar de pensar demais”.",
+    "Trata-se de entender o que acontece com você e construir, aos poucos, novas possibilidades de responder ao que vive.",
   ],
-  quote:
-    "Não ofereço respostas prontas. Ofereço presença, método e um trabalho feito a dois.",
+  quote: "Psicoterapia para se entender, não para se julgar.",
 };
 
 export const approach = {
   kicker: "Abordagem",
-  title: "TCC: olhar para o que se pensa, sente e faz.",
-  body: "A Terapia Cognitivo-Comportamental parte de uma ideia simples e potente: pensamentos, emoções e comportamentos se alimentam. Um pensamento automático — “não vou dar conta”, “vão me rejeitar” — muda o corpo, as escolhas, o modo de se relacionar.",
-  closer:
-    "Na sessão, observamos esses ciclos juntos. Sem julgamento. Com perguntas, registros e exercícios pequenos, quando fizer sentido. O objetivo não é se tornar outra pessoa. É se reconhecer com mais honestidade — e ter mais escolha.",
+  title: "TCC: entender o que acontece entre o que você pensa, sente e faz.",
+  body: [
+    "A Terapia Cognitivo-Comportamental parte da compreensão de que pensamentos, emoções e comportamentos estão conectados.",
+    "Às vezes, um pensamento automático como “eu não vou dar conta”, “vou decepcionar alguém” ou “não sou suficiente” pode influenciar a forma como você se sente, se relaciona e toma decisões — mesmo sem perceber.",
+  ],
+  closer: [
+    "Na terapia, investigamos esses ciclos juntos.",
+    "Sem julgamentos e sem fórmulas prontas.",
+    "Podemos utilizar perguntas, registros, reflexões e estratégias práticas quando fizer sentido para você.",
+    "O objetivo não é transformar você em outra pessoa.",
+    "É ajudá-la a se compreender melhor e ampliar suas possibilidades de escolha.",
+  ],
   pillars: [
     {
       name: "Pensamentos",
-      text: "Nomear o que aparece no automático e testar se essa leitura ainda serve.",
+      text: "Perceber pensamentos automáticos, preocupações e interpretações que aparecem no dia a dia.",
     },
     {
       name: "Emoções",
-      text: "Dar lugar ao que se sente, sem se deixar levar só pela urgência do momento.",
+      text: "Aprender a reconhecer e lidar melhor com o que sente, sem precisar fugir ou se deixar levar completamente pela emoção.",
     },
     {
       name: "Comportamentos",
-      text: "Ensaiar ações possíveis, pequenas e concretas, no ritmo da sua vida.",
+      text: "Entender padrões que se repetem e experimentar novas formas de agir, se posicionar e cuidar de si.",
     },
   ],
 };
 
 export const paths = {
   kicker: "Caminhos",
-  title: "Com o que costumo acompanhar",
-  intro:
-    "A escuta é ampla. Estes são alguns dos temas que mais aparecem no consultório — e com os quais o trabalho em TCC conversa especialmente bem.",
+  title: "Talvez a terapia faça sentido para você se...",
+  intro: "",
   items: [
     {
-      title: "Ansiedade e preocupação que não desliga",
-      text: "Quando a mente antecipa, ensaiar o pior e dificulta o descanso.",
+      title: "Ansiedade e uma mente que não desliga",
+      text: "Preocupações constantes, antecipação do pior, dificuldade de descansar e aquela sensação de estar sempre pensando em alguma coisa.",
     },
     {
-      title: "Autocrítica e a sensação de nunca ser suficiente",
-      text: "Exigência alta, comparação constante e pouco espaço para o próprio cuidado.",
+      title: "Autocobrança e sensação de nunca ser suficiente",
+      text: "Exigência muito alta consigo, perfeccionismo, comparação e dificuldade de reconhecer o próprio esforço.",
     },
     {
-      title: "Transições de vida",
-      text: "Formação, trabalho, relacionamentos e mudanças que pedem reorganização.",
+      title: "Autoestima e insegurança",
+      text: "Medo de errar, necessidade de aprovação, dúvidas constantes sobre si e dificuldade de reconhecer o próprio valor.",
     },
     {
-      title: "Dificuldade de se colocar",
-      text: "Pedir, recusar, delimitar — e o custo de sempre caber no outro.",
+      title: "Relacionamentos e limites",
+      text: "Dificuldade de dizer não, medo de decepcionar, culpa ao se colocar em primeiro lugar ou padrões que acabam se repetindo nas relações.",
     },
     {
-      title: "Estresse e sobrecarga emocional",
-      text: "Cansaço que não passa só com folga, e a necessidade de um outro ritmo.",
+      title: "Pensar demais",
+      text: "Repassar conversas, imaginar cenários, tentar encontrar uma resposta perfeita e perceber que pensar mais nem sempre traz mais clareza.",
+    },
+    {
+      title: "Mudanças e vida adulta",
+      text: "Trabalho, formação, relacionamentos, escolhas, responsabilidades e transições que fazem surgir a sensação de não saber exatamente como lidar com tudo.",
     },
   ],
-  note: "Acolher não é atender a qualquer demanda. Se o que você busca pede outro tipo de cuidado, conversamos sobre isso com transparência.",
+  note: "A terapia não precisa começar apenas quando alguma coisa está insuportável. Ela também pode ser um espaço para compreender melhor como você tem vivido.",
 };
 
 export const process = {
   kicker: "Como funciona",
-  title: "Um começo simples, sem pressa.",
+  title: "Um processo construído no seu ritmo.",
+  intro: "Atendimento individual para adultos.",
   steps: [
     {
       num: "01",
-      title: "Conversa inicial",
-      text: "Quinze a vinte minutos, sem compromisso, para nos conhecermos e ver se o acompanhamento faz sentido para você.",
+      title: "Psicoterapia online",
+      text: "Atendimento por videochamada, permitindo realizar as sessões de onde você estiver.",
     },
     {
       num: "02",
-      title: "Sessões",
-      text: "Encontros semanais de cinquenta minutos, online, em um horário reservado. Um espaço contínuo, não um atendimento avulso.",
+      title: "Atendimento presencial em Mogi das Cruzes – SP",
+      text: "",
     },
     {
       num: "03",
-      title: "Entre as sessões",
-      text: "Quando couber, pequenos exercícios para observar pensamentos e ensaiar mudanças no cotidiano — sempre no seu ritmo.",
+      title: "Abordagem: Terapia Cognitivo-Comportamental",
+      text: "",
     },
+  ],
+  note: [
+    "Durante as primeiras sessões, conversamos sobre aquilo que trouxe você até a terapia, sua história e o que gostaria de compreender ou mudar.",
+    "A partir daí, construímos juntas os objetivos do processo terapêutico.",
   ],
 };
 
 export const invite = {
   kicker: "Convite",
-  title: "Se algo aqui fez sentido, podemos conversar.",
-  body: "A primeira conversa é só isso: uma conversa. Sem ficha longa, sem compromisso de começar. Um tempo para você contar o que busca e eu dizer como posso acompanhar.",
-  cta: "Agendar uma conversa",
+  title: "Se algo aqui fez sentido para você, podemos conversar.",
+  body: [
+    "Se quiser entender melhor como funciona o atendimento, valores, horários disponíveis ou tirar alguma dúvida antes de começar, pode falar comigo pelo WhatsApp.",
+    "Sem formulário enorme e sem precisar chegar sabendo exatamente o que dizer.",
+  ],
+  cta: "Quero saber sobre a terapia",
   secondary: "Ver perguntas frequentes",
 };
 
@@ -138,7 +164,7 @@ export const faq = {
     },
     {
       q: "Você atende em Mogi das Cruzes?",
-      a: "Estou em Mogi das Cruzes e o acompanhamento é online. Assim dá para conversar com calma de onde você estiver — na cidade ou em outro lugar.",
+      a: "Sim. Atendo presencialmente em Mogi das Cruzes e também online, por videochamada, de onde você estiver.",
     },
     {
       q: "Preciso ter um diagnóstico para começar?",
@@ -193,7 +219,7 @@ export const privacy = {
     {
       title: "Quem é responsável pelo tratamento",
       paragraphs: [
-        "A controladora é Beatriz Meirelles, psicóloga, CRP 06/237136, com atendimento online a partir de Mogi das Cruzes (SP).",
+        "A controladora é Beatriz Meirelles, psicóloga, CRP 06/237136, com atendimento online e presencial em Mogi das Cruzes (SP).",
         "Para exercer seus direitos ou tirar dúvida sobre esta política, escreva pelo WhatsApp informado no site. Esse é o canal oficial enquanto não houver um e-mail cadastrado.",
       ],
     },

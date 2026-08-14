@@ -3,7 +3,7 @@
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { WhatsAppLink } from "@/components/WhatsAppLink";
-import { nav, site } from "@/content";
+import { invite, nav, site } from "@/content";
 
 export function Header() {
   const pathname = usePathname();
@@ -147,7 +147,7 @@ export function Header() {
               onClick={() => setOpen(false)}
               className="mt-8 inline-flex items-center justify-center rounded-full bg-olive-deep px-5 py-3 text-sm uppercase tracking-[0.16em] text-cream"
             >
-              Agendar uma conversa
+              {invite.cta}
             </WhatsAppLink>
           </nav>
         </div>
