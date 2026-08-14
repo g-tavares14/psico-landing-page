@@ -172,7 +172,7 @@ export const faq = {
     },
     {
       q: "Qual a duração de cada sessão?",
-      a: "Cinquenta minutos, em geral uma vez por semana. A frequência pode ser revista juntos, de acordo com o momento.",
+      a: "Uma hora, em geral uma vez por semana. A frequência pode ser revista juntos, de acordo com o momento.",
     },
     {
       q: "Qual o valor da sessão?",
@@ -181,10 +181,6 @@ export const faq = {
     {
       q: "Você atende convênio?",
       a: "O atendimento é particular. Se precisar, posso emitir recibo para reembolso, conforme as regras do seu plano.",
-    },
-    {
-      q: "Você é recém-formada. Isso muda o acompanhamento?",
-      a: "Estou no começo da prática e em formação continuada em TCC. Isso significa estudo atualizado, supervisão e um acompanhamento com tempo real de atenção. Se você preferir alguém com mais anos de consultório, podemos falar sobre isso com honestidade — sem constrangimento.",
     },
   ],
 };
